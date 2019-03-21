@@ -6,9 +6,14 @@ router.get('/object', function (req, res){
     res.send({type:'GET'});
 });
 
-//POST req an Object
+//POST req an Object 
 router.post('/object', function (req, res){
-    res.send({type:'POST'});
+    console.log(req.body);
+    res.send({
+        type:'POST',
+        name:req.body.name,
+        level:req.body.level
+    });
 });
 
 //update an object
